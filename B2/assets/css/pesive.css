@@ -1,0 +1,12 @@
+@media(max-width:768px){
+    .header{
+        text-align: center;
+    }
+   .list{
+       display: block;
+   }
+   .list-item{
+       margin-top: 5px;
+       width: 100%;
+   }
+    }
