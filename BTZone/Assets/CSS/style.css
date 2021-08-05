@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-size: 14px;
+    font-family:'Open Sans', sans-serif; 
+    line-height: 1;
+    /* overflow-x:hidden; */
+}
+
+.header{
+    position: relative;
+    background-color: #F8F8F8;
+   
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:190px;
+    background-color:rgba(244,244,244, 0.3) ;
+    width: 100%;
+    height: 0.2px;
+    z-index: 20;
+}
+.header-img{
+      
+    color: #2C4985;
+    margin-top: 5px;
+    position: relative;
+    z-index: 9;
+    padding: 0;
+}
+.header-img >p{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.header-content{
+    margin-top: 20px;
+    
+}
+.content-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-item:not(:first-child){
+    margin-left: 76px;
+}
+.content-info{
+    margin-left: 16px;
+}
+.content-info > p,
+.content-info > span{
+    font-family: 'Montserrat', sans-serif;
+}
+.content-info > p{
+    color: #1A3761 ;
+}
+.content-info > span{
+    color: #EE1F23;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.header-menu{
+    position: relative;
+    z-index: 5;
+    top:27px
+}
+.menu-list{
+    display: flex;
+    justify-content: center;
+} 
+.menu-item{
+    margin-right: 74px;
+}
+.menu-link{
+    position: relative;
+    text-transform: uppercase;
+    color: #FFFF;
+    padding-bottom: 21px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.menu-link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #FFFF;
+    color: #FFFF;
+    transform: scale(0);
+    transition: 0.3s linear;
+    
+}
+.menu-link:hover{
+    color: #FFFF;
+}
+.menu-link:hover::before{
+    color:#FFFF;
+    transform: scale(1);
+}
+.banner{
+
+    position: relative;
+    background: url("../imager/image\ 3.jpg") no-repeat center/cover ;
+  
+    top: -60px;
+    min-height: 886px; 
+}
+.banner::after{
+   content: '';
+   position: absolute;
+   
+   width: 27vw;
+   height: 35px;
+   background-color: #F8F8F8;
+   left: 0;
+   top: 0;
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    left: 27vw;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color:  #F8F8F8 transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 35px solid #F8F8F8;
+    z-index: 2;
+}
+
+
+.banner-content{
+   padding-top: 290px;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-title {
+    max-width: 65%;
+
+}
+.banner-text {
+    display: block;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #FFFF;
+    
+
+}
+.banner-icon{
+    flex-direction: column;
+    position: absolute;
+    top:70%;
+    left: 75%;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 4;
+    display: flex;
+    justify-content: end;
+}
+.banner-icon > a:nth-of-type(2){
+    margin: 30px 0;
+}
+.banner-icon{
+    max-width: 35%;
+}
+.banner-description{
+    font-size: 16px;
+    max-width: 90%;
+    font-weight:300;
+    margin-top: 20px;
+    line-height: 1.4;
+    color: #FFFF;
+    margin-bottom: 70px;
+}
+.banner-angle img{
+    position: absolute;
+    left: 48.3vw;
+    z-index: 99;
+    bottom: 0;
+    
+}
+
+.banner-angle::before{
+    content: '';
+    position: absolute;
+    left: 47vw;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    
+    border-left: 28px solid transparent;
+    border-bottom: 28px solid #FFFF;
+    border-right: 28px solid transparent;    
+    z-index: 4;
+}
+.click{
+    position: relative;
+    padding: 14.4px 51px;
+    background-color: #EE1F23;
+    color: #FFFF;
+    line-height: 1;
+    height: 48px;
+}
+.click:hover{
+    color: #FFFF;
+}
+.click .arrow{
+    position: absolute;
+    top: 0;
+    color: black;
+    left: 100%;
+    background-color: #F8F8F8;
+    width: 48px;
+    text-align:center ;
+    height: 48px;
+    padding: 14px;
+}
+.banner-angle{
+    padding-top: 30px;
+}
