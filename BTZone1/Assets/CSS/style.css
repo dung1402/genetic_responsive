@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -23,13 +23,35 @@ body{
     line-height: 1;
 
 }
+body a{
+    color: inherit;
+}
 
 .header{
     position: relative;
     background-color: #F8F8F8;
    
 }
+/*sub-menu */
+.sub-menu {
+    width: 25px;
+    position: absolute;
+    right: 4%;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 999;
+    
+    display: none;
+}
+.sub-menu div {
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    margin: 5px;
+    transition: transform 0.5s linear;
 
+}
 .header::before{
     content: '';
     position: absolute;
@@ -197,6 +219,9 @@ body{
 .banner-icon{
     max-width: 35%;
 }
+.banner-icon a img{
+    transition: 0.3s;
+}
 .banner-icon a:hover img{
     transform: scale(1.6);
 }
@@ -211,20 +236,22 @@ body{
 }
 .banner-angle img{
     position: absolute;
-    left: 48.5vw;
+    left: 48%;
     z-index: 99;
     bottom: 0;
+    transform: translateX(-50%);
+
     
 }
 
 .banner-angle::before{
     content: '';
     position: absolute;
-    left: 47vw;
+    left: 48%;
+    transform: translateX(-50%);
     bottom: 0;
     width: 28px;
     height: 28px;
-    
     border-left: 28px solid transparent;
     border-bottom: 28px solid #FFFF;
     border-right: 28px solid transparent;    
@@ -241,7 +268,7 @@ body{
     
 }
 .click:hover{
-    background-color:rgb(11, 245, 214);
+    background-color:rgb(10, 143, 219);
     color: rgba(255, 255,255, 1);
 
 }
@@ -382,16 +409,23 @@ top: 72px;
     margin-bottom: 12px;
    text-align: center;
 }
-.row-main{
-    width: 370px;
-    height: 491px;
-    left: 0px;
-    top: 123px;
-}
-.row-main:hover{
-    transform: scale(0.9);
-}
 
+.row-main{
+     transition: 0.3s;
+}
+ .row-main .img-hover{
+    overflow: hidden;
+}
+.img-banner{
+    transition: 0.3s;
+
+}
+.row-main:hover .img-banner{
+    transform: scale(1.06);
+}
+.row-main:hover {
+    transform: scale(1.01);
+}
 .row-top p{
     color: rgb(236, 9, 9);
     left: 40.94%;
@@ -450,7 +484,8 @@ top: 72px;
 }
 .banner-faback{
     margin-top: 3vw;
-    background: url(../imager/feedback_image.png);
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)), url(../imager/feedback_image.png) no-repeat center/cover;
+    min-height: 838px;
 }
 .banner-faback .row-top{
     margin-top: 3vw;
@@ -458,6 +493,8 @@ top: 72px;
 }
 .slider-item{
     position: relative;
+    z-index: -1;
+    padding-bottom: 20px;
 }
 .slider-item img{
     max-width: 100%;
@@ -465,9 +502,12 @@ top: 72px;
 .slider-icon{
     position: absolute; 
     font-family: 'Open Sans',sans-serif;
-    bottom: -40px;
-    left: 71%;
-    width: 70%;
+    bottom: 0;
+    left: 70%;
+    padding: 10px 5px 30px 20px;
+    width: 50%;
+    z-index: 999;
+    color: white;
     background-color: #265BC5;
     transform: translateX(-50%);
 }
@@ -497,7 +537,7 @@ line-height: 22px;
     font-size: 16px;
     line-height: 22px;
     color: #505050;
-   width: 39vw;
+   max-width: 524px;
 }
 .slider-banner{
     margin-top: 30px;
@@ -523,14 +563,14 @@ line-height: 22px;
 }
 .slick-dots {
 
-    bottom: -45px;
+    bottom: 63px;
 }
 .banner-info{
     margin-top: 32px;
     position: relative;
     background: url(../imager/Rectangle\ 331.jpg) no-repeat center/cover;
     width: 100%;
-    min-height: 212px;
+    min-height:212px;
     z-index: 1;
 }
 .banner-info::before{
@@ -540,12 +580,12 @@ line-height: 22px;
     top: 0;
     background-color: #265BC5;
     width: 100%;
-    height: 212px;
+    height: 100%;
     z-index: 2;
     opacity: 0.955;
 }
 .info-list{
-    height: 212px;
+    
     justify-content: space-between;
     z-index: 999;
     color: #FFFF;
@@ -565,6 +605,7 @@ line-height: 22px;
 .list-item p{
     margin-top: 15px;
     font-family: 'Open Sans',sans-serif;
+    line-height: 20.6px;
 }
 .banner-footer{
     padding-top: 50px;
@@ -580,7 +621,7 @@ line-height: 22px;
     padding-bottom: 40px;
 }
 .footer-name{
-    font-size: -16px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 15px;
@@ -590,6 +631,7 @@ line-height: 22px;
     font-weight: 400;
     color: #505050;
     line-height: 1.5;
+    
 }
 .footer-menu{
     margin-left: 60px;
@@ -669,4 +711,10 @@ line-height: 22px;
 .bottom li{
     padding: 2vw;
   
+}
+.footer-menu .footer-list .footer-item a{
+    transition: 0.3s;
+}
+.footer-menu .footer-list .footer-item:hover a{
+    color: rgb(245, 6, 6);
 }
